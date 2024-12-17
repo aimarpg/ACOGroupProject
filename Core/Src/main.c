@@ -72,7 +72,7 @@ static void MX_ADC1_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_RTC_Init(void);
-static void Enter_Standby_Mode(void);
+static void Enter_Stop_Mode(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -150,7 +150,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  Enter_Standby_Mode();
+	  Enter_Stop_Mode();
 
 
 	  if (HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) == HAL_OK) {
@@ -168,7 +168,7 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-static void Enter_Standby_Mode(void){
+static void Enter_Stop_Mode(void){
 	  HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
 	  SystemClock_Config();
 }
