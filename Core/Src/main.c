@@ -49,7 +49,7 @@ UART_HandleTypeDef huart2;
 
 float GAS_ALARM_THRESHOLD_MULTIPLIER = 1.5f;
 const char* GAS_ALARM_MESSAGE = "⚠GAS⚠\r\n";
-const int WAKEUP_TIMER_SECONDS = 1;
+const int WAKEUP_TIMER_SECONDS = 60;
 
 /* USER CODE BEGIN PV */
 
